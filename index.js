@@ -50,6 +50,10 @@ exports.openSync = function(filepath, opts) {
   return reader;
 };
 
+exports.openWithBuffer = function(buffer) {
+  return new Reader(buffer);
+};
+
 exports.init = function() {
   throw new Error(utils.legacyErrorMessage);
 };
